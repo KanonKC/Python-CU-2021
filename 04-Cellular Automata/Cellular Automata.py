@@ -92,16 +92,17 @@ def runrule(p):
 
 def rule1(p,i):
  sample_cell = p[i-2:i+3]
- if sample_cell == "10100" or sample_cell == "01000":
-     return 1
- return 0
+#  print(sample_cell)
+ if sample_cell == list("10100") or sample_cell == list("01000"):
+     return "1"
+ return "0"
 
 def prettyprint(p):
  s = "".join([str(e) for e in p])
  print(s)
 # p0 = [0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1]
 def main():
- p0 = input()
+ p0 = "01010101010101010101"#input()
  run20(p0)
 main()
 # -----------------
